@@ -1,5 +1,4 @@
 import time
-
 import pandas
 import selenium
 from selenium import webdriver
@@ -27,7 +26,7 @@ try:
     monthly_table = driver.find_element(By.XPATH,
                                         '/html/body/div[4]/div/div/div[2]/div/div[2]/div[4]/div[5]/div/div/table')
 except selenium.common.exceptions.NoSuchElementException:
-    print('Cant find an element.')
+    print('Cant find an element. Browser has been recognized as bot. You have to try next time :/')
 else:
 
     monthly_table_headers = monthly_table.find_elements(By.TAG_NAME, value='th')[:4]
